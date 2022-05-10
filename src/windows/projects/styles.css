@@ -1,0 +1,4 @@
+html { /* Стиль шрифта кнопок меню (Title Bar). [File, Edit, View ...] */
+    color: #cccccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

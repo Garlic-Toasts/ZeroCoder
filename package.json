@@ -1,5 +1,5 @@
 {
-  "name": "zerocoder",
+  "name": "ZeroCoder",
   "version": "1.0.0",
   "description": "Hello World!",
   "main": "main.js",
@@ -9,6 +9,7 @@
     "start": "electron ."
   },
   "dependencies": {
+    "custom-electron-titlebar": "^4.1.0",
     "electron": "^18.2.0"
   }
 }
