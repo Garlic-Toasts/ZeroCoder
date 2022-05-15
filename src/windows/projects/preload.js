@@ -7,12 +7,15 @@ window.addEventListener('DOMContentLoaded', () => {
         if (element) element.innerText = text
     }
 
-    const titlebar = new Titlebar({
-        maximizable: false,
-        icon: __dirname + "./icon.svg",
-        backgroundColor: "#3b3e42",
-        svgColor: "#FFFFFF",
-        iconSize: 23
-    });
+    const { version } = require('../../../package.json')
+    document.getElementById('version').innerHTML = version
+
+    // const titlebar = new Titlebar({
+    //     maximizable: false,
+    //     icon: __dirname + "./logo.png",
+    //     backgroundColor: "#3b3e42",
+    //     svgColor: "#FFFFFF",
+    //     iconSize: 23
+    // });
 
 })

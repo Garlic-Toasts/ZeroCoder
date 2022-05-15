@@ -148,3 +148,17 @@
 	left: 70px;
 	color: #ADB4BC;
 }
+
+html { 
+	color: #cccccc;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.titlebar {
+	-webkit-user-select: none;
+	-webkit-app-region: drag;
+}
