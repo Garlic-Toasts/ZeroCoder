@@ -5,10 +5,30 @@
         <title>ZeroCoder | Editor</title>
     </head>
     <body>
-        <div id="projects">
-            <input type="search" id="search_projects" placeholder="Search projects" onClick=""/>
-        </div>
         <div id="left_div">
+            <div>
+                <img src="logo.png" id="logo"/>
+                <p id="name">Zero Coder</p>
+                <p id="version">version</p>
+            </div>
+            <div class="radio-proj" id="p-div">
+                <input type="radio" value="projects" id="proj_radio" name="radio-menu" onClick="projects()" checked>
+                <label for="proj_radio"><p>Projects</p></label>
+            </div>
+            <div class="radio-proj" id="t-div">
+                <input type="radio" value="tutorials" id="tut_radio" name="radio-menu" onClick="tutorials()">
+                <label for="tut_radio"><p>Tutorials</p></label>
+            </div>
+            <input type="button" value="Configure" id="conf" class="footer"/>
+            <input type="button" value="Help" id="help" class="footer"/>
         </div>
+        <div id="projects">
+            <input type="search" id="search_projects" placeholder="Search projects" onClick="search()"/>
+            <input type="button" class="btn-search" id="new_solution" value="New solution" onClick="newSolution()"/>
+            <input type="button" class="btn-search" id="open" value="Open" onClick="openButton()"/>
+            <input type="button" class="btn-search" id="get_from_vcs" value="Get from VCS" onClick="getFromVcs()" disabled/>
+            <div id="line"></div>
+        </div>       
+        <script type="text/javascript" src="front.js"></script>
     </body>
 </html>
