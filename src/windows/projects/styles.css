@@ -189,18 +189,8 @@
 	color: #ADB4BC;
 }
 
-html { 
-	color: #cccccc;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	width: 800px;
-	height: 600px;
-}
-
 ::-webkit-scrollbar {
     display: none;
 }
 
-.titlebar {
-	-webkit-user-select: none;
-	-webkit-app-region: drag;
-}
+

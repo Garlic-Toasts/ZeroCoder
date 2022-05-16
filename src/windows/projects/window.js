@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, Menu } = require('electron')
 const { setupTitlebar, attachTitlebarToWindow } = require('custom-electron-titlebar/main')
 
 const createWindow = () => {
@@ -10,7 +10,7 @@ const createWindow = () => {
         title: "ZeroCoder | Projects",
         resizable: false,
         backgroundColor: "#323335",
-        frame: true,
+        frame: false,
         fullscreenable: false,
         webPreferences: {
             preload: __dirname + '/preload.js',
@@ -28,5 +28,4 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
     app.quit()
 })
-
 
