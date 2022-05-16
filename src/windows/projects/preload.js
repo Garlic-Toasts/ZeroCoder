@@ -40,7 +40,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		t = '<input type="radio" value="'+pList[i].path+'id="'+i+'_radio"name="radio-list"onClick="openProject()"'
 		if (i === 0) {
 			t += "hover"
-			console.log("!")
 		}
 		t += '><label for="'+i+'_radio"><p class="p-name">'+pList[i].name+'</p><p class="p-path">'+pList[i].path+'</p></label>'
 		console.log(t)
