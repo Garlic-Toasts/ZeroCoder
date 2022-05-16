@@ -47,4 +47,12 @@ window.addEventListener('DOMContentLoaded', () => {
 		list.appendChild(e)
     }
 
+    const titlebar = new Titlebar({
+        icon: __dirname + "./../../../appLogo.png",
+        backgroundColor: "#3b3e42",
+        svgColor: "#FFFFFF",
+        iconSize: 23,
+        menu: null
+    });
+
 })

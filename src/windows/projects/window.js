@@ -1,6 +1,7 @@
 const { app, BrowserWindow, Menu } = require('electron')
 const { setupTitlebar, attachTitlebarToWindow } = require('custom-electron-titlebar/main')
 
+setupTitlebar();
 const createWindow = () => {
     const win = new BrowserWindow({
         width: 800,
@@ -19,6 +20,7 @@ const createWindow = () => {
     })
 
     win.loadFile(__dirname + '/window.html')
+    attachTitlebarToWindow(win);
 }
 
 app.whenReady().then(() => {
