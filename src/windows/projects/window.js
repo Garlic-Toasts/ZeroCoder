@@ -4,8 +4,8 @@ const { setupTitlebar, attachTitlebarToWindow } = require('custom-electron-title
 setupTitlebar();
 const createWindow = () => {
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 830,
+        height: 630,
         icon: __dirname + './../../../appLogo.png',
         center: true,
         title: "ZeroCoder | Projects",
