@@ -31,8 +31,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const { version } = require('../../../package.json')
     document.getElementById('version').innerHTML = version
-
-    console.log(getProjects(dir))
+    
+    var pList = getProjects(dir)
+    var l = document.getElementById('list')
+	for (var i=0; i < pList.length; i++) {
+		let e = document.createElement('div');
+		e.innerText = pList[i].name
+		t = '<input type="radio" value="'+pList[i].path+'id="'+i+'_radio"name="radio-list"onClick="openProject()"'
+		if (i === 0) {
+			t += "hover"
+			console.log("!")
+		}
+		t += '><label for="'+i+'_radio"><p class="p-name">'+pList[i].name+'</p><p class="p-path">'+pList[i].path+'</p></label>'
+		console.log(t)
+		e.innerHTML = t
+		e.className = "project"
+		l.appendChild(e)
+    }
 
     // const titlebar = new Titlebar({
     //     maximizable: false,
