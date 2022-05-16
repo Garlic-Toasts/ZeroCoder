@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/N3wSk1Y/ZeroCoder/">
-    <img src="src/windows/projects/logo.png" alt="Logo" width="80" height="80">
+    <img src="src/windows/projects/appLogo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">ZeroCoder</h3>
