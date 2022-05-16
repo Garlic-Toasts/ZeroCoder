@@ -12,10 +12,12 @@ function getProjects(dir, projects) {
         if (fs.statSync(path).isDirectory()){
             getProjects (path, projects);
         } else {
-            projects.push({
-                name: p.basename(path).slice(0, p.basename(path).indexOf(".")),
-                path: path
-            });
+            if (p.extname(path) == ".bprint") {
+                projects.push({
+                    name: p.basename(path).slice(0, p.basename(path).indexOf(".")),
+                    path: path
+                });
+            }    
         }
     }
     return projects;
