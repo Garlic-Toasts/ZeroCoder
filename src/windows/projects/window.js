@@ -4,7 +4,7 @@ const { setupTitlebar, attachTitlebarToWindow } = require('custom-electron-title
 setupTitlebar();
 const createWindow = () => {
     const win = new BrowserWindow({
-        width: 830,
+        width: 800,
         height: 630,
         icon: __dirname + './../../../images/icon.ico',
         center: true,
