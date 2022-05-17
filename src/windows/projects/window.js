@@ -6,7 +6,7 @@ const createWindow = () => {
     const win = new BrowserWindow({
         width: 830,
         height: 630,
-        icon: __dirname + './../../../appLogo.png',
+        icon: __dirname + './../../../images/icon.ico',
         center: true,
         title: "ZeroCoder | Projects",
         resizable: false,

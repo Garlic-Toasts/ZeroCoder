@@ -1,15 +1,39 @@
 {
   "name": "ZeroCoder",
-  "version": "Dev 2022.5",
-  "description": "Hello World!",
+  "version": "1.0.0",
+  "description": "Visual Programming IDE",
   "main": "main.js",
-  "author": "DF, GE",
-  "license": "MIT",
+  "author": "ZeroCoder",
+  "license": "Apache 2.0",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
+
+  "build": {
+    "appId": "ZeroCoder",
+    "win": {
+      "icon": "images/icon.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "images/icon.ico",
+      "uninstallerIcon": "images/icon.ico",
+      "license": "./LICENSE",
+      "uninstallDisplayName": "ZeroCoder",
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+
   "dependencies": {
-    "custom-electron-titlebar": "^4.1.0",
-    "electron": "^18.2.0"
+    "custom-electron-titlebar": "^4.1.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^23.0.3",
+    "electron": "^18.2.0",
+    "custom-electron-titlebar": "^4.1.0"
   }
 }
