@@ -20,7 +20,6 @@ function getProjects(dir, projects) {
             }    
         }
     }
-    console.log(fs.existsSync(dir))
     return projects;
 }
 
@@ -30,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (element) element.innerText = text
     }
 
-    const { version } = require('../../../package.json')
+    const { version } = require('./package.json')
     document.getElementById('version').innerHTML = version
     
     
@@ -54,7 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const titlebar = new Titlebar({
-        icon: __dirname + "./../../../images/icon.ico",
+        icon: __dirname + "/images/icon.ico",
         backgroundColor: "#3b3e42",
         svgColor: "#FFFFFF",
         iconSize: 23,

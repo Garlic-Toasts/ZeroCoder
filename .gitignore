@@ -1,4 +1,4 @@
 /.vscode
 /node_modules
-/project.bprint
+/.bprint
 /dist

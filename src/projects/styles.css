@@ -23,7 +23,7 @@ html {
 	position: absolute;
 	left: 25px;
 	top: 20px;
-	width: 230px;
+	width: 270px;
 	height: 30px;
 	background: #323335;
 	outline: none;
@@ -45,7 +45,7 @@ html {
 	position: absolute;
 	left: 15px;
 	top: 60px;
-	width: 560px;
+	width: 570px;
 	border-bottom: 1px solid #6D6F6E;
 }
 .btn-search {
@@ -69,15 +69,15 @@ html {
 	color: #4C5053;
 }
 #new_solution {
-	left: 270px;
+	left: 310px;
 	width: 100px;
 }
 #open {
-	left: 380px;
+	left: 420px;
 	width: 50px;
 }
 #get_from_vcs {
-	left: 440px;
+	left: 480px;
 	width: 105px;
 }
 .radio-proj {
@@ -205,5 +205,4 @@ ul {
 ::-webkit-scrollbar {
     display: none;
 }
-
 
