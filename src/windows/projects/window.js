@@ -13,6 +13,7 @@ const createWindow = () => {
         backgroundColor: "#323335",
         frame: false,
         fullscreenable: false,
+        maximizable: false,
         webPreferences: {
             preload: __dirname + '/preload.js',
             nodeIntegration: true

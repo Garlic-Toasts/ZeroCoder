@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('version').innerHTML = version
     
     
-    if(fs.existsSync(dir)){
+    if (fs.existsSync(dir)){
         var projectsList = getProjects(dir)
     } else {
         var projectsList = []
@@ -58,7 +58,8 @@ window.addEventListener('DOMContentLoaded', () => {
         backgroundColor: "#3b3e42",
         svgColor: "#FFFFFF",
         iconSize: 23,
-        menu: null
+        menu: null,
+        maximizable: false
     });
 
 })
