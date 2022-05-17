@@ -20,6 +20,7 @@ function getProjects(dir, projects) {
             }    
         }
     }
+    console.log(fs.existsSync(dir))
     return projects;
 }
 
@@ -32,7 +33,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const { version } = require('../../../package.json')
     document.getElementById('version').innerHTML = version
     
-    var projectsList = getProjects(dir)
+    
+    if(fs.existsSync(dir)){
+        var projectsList = getProjects(dir)
+    } else {
+        var projectsList = []
+    }
     var list = document.getElementById('list')
 	for (var i = 0; i < projectsList.length; i++) {
 		let e = document.createElement('div');
