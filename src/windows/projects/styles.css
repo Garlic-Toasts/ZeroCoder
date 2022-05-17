@@ -50,12 +50,12 @@ html {
 }
 .btn-search {
 	position: absolute;
-	top: 22px;
-	height: 25px;
-	font-size: 11pt;
+	top: 23px;
+	height: 23px;
+	font-size: 10pt;
 	background-color: #4C5053;
 	color: #ADB4BC;
-	border: 2px solid #5A5F62;
+	border: 1px solid #5A5F62;
 	border-radius: 4px;
 	outline: none;
 }
@@ -105,7 +105,7 @@ html {
 .radio-proj p {
 	position: absolute;
 	font-size: 12pt;
-	top: -10px;
+	top: -12px;
 	left: 40px;
 	color: #ADB4BC;
 }
@@ -156,7 +156,10 @@ html {
 #list{
 	position: absolute;
 	top: 70px;
-	left: 20px;
+	left: 20px;	
+	height: 530px;
+	width: 580px;
+	overflow-y: auto;
 }
 .project {
 	height: 50px;
