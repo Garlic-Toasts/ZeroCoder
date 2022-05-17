@@ -2,7 +2,7 @@ const { Titlebar, Menu } = require("custom-electron-titlebar")
 const fs = require('fs')
 const p = require('path')
 
-const dir = 'C:\\Users\\people\\Desktop\\Grisha\\School\\zerocoder\\test_projects' // TOEDIT
+const dir = 'C:\\Users\\Дмитрий\\ZeroCoderProjects' // TOEDIT
 
 function getProjects(dir, projects) {
     projects = projects || [];
@@ -34,8 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
     
     var projectsList = getProjects(dir)
     var list = document.getElementById('list')
-    console.log(list)
-	for (var i=0; i < projectsList.length; i++) {
+	for (var i = 0; i < projectsList.length; i++) {
 		let e = document.createElement('div');
 		e.innerText = projectsList[i].name
 		t = '<input type="radio" value="'+projectsList[i].path+'id="'+i+'_radio"name="radio-list"onClick="openProject()"'
