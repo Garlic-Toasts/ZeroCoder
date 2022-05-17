@@ -196,7 +196,12 @@ html {
 	left: 40px;
 	color: #ADB4BC;
 }
-
+li {
+	list-style-type: none;
+}
+ul {
+	padding-left: 0;
+  }
 ::-webkit-scrollbar {
     display: none;
 }

@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     var list = document.getElementById('list')
 	for (var i = 0; i < projectsList.length; i++) {
-		let e = document.createElement('div');
+		let e = document.createElement('li');
 		e.innerText = projectsList[i].name
 		t = '<input type="radio" value="'+projectsList[i].path+'id="'+i+'_radio"name="radio-list"onClick="openProject()"'
 		if (i === 0) {

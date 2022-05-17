@@ -25,12 +25,12 @@
             <input type="button" value="Help" id="help" class="footer"/>
         </div>
         <div id="projects">
-            <input type="search" id="search_projects" placeholder="Search projects" onClick="search()"/>
+            <input type="search" id="search_projects" placeholder="Search projects" onkeyup="search()"/>
             <input type="button" class="btn-search" id="new_solution" value="New solution" onClick="newSolution()"/>
             <input type="button" class="btn-search" id="open" value="Open" onClick="openButton()"/>
             <input type="button" class="btn-search" id="get_from_vcs" value="Get from VCS" onClick="getFromVcs()" disabled/>
             <div id="line"></div>
-            <div id="list"></div>
+            <ul id="list"></ul>
         </div>       
         <script type="text/javascript" src="front.js"></script>
     </body>
