@@ -39,7 +39,7 @@ html {
     width: 12px; 
     height: 12px;
     background-size: 80px;
-    background:  url(./../../../images/cross.png);
+    background:  url(../../images/cross.png);
 }
 #line {
 	position: absolute;
