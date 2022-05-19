@@ -1,6 +1,3 @@
-function newSolution() {
-	//...
-}
 function search() {
     let input = document.getElementById("search_projects");
     let filter = input.value.toUpperCase().trim();
@@ -15,16 +12,4 @@ function search() {
         }
     }
 }
-function openButton() {
-	//...
-}
-function getFromVcs() {
-	//...
-}
-function projects() {
-	//...
-}
-function tutorials() {
-	//...
-}  
 
