@@ -6,7 +6,7 @@ const dialog = require('electron').dialog
 
 setupTitlebar();
 const createWindow = () => {
-    const win = new BrowserWindow({
+    const projectsWindow = new BrowserWindow({
         width: 800,
         height: 630,
         icon: './images/icon.ico',
@@ -23,8 +23,8 @@ const createWindow = () => {
         },
     })
 
-    win.loadFile('./src/projects/window.html')
-    attachTitlebarToWindow(win);
+    projectsWindow.loadFile('./src/projects/window.html')
+    attachTitlebarToWindow(projectsWindow);
 }
 
 app.whenReady().then(() => {

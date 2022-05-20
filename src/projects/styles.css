@@ -150,8 +150,9 @@ html {
 #version {
 	position: absolute;
 	top: 35px;
-	left: 70px;
-	color: #ADB4BC;
+	left: 69px;
+	color: #80878f;
+	font-size: 90%
 }
 #list{
 	position: absolute;
