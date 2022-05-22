@@ -2,3 +2,4 @@
 /node_modules
 /.bprint
 /dist
+/devConfig.json

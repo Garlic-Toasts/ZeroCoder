@@ -4,7 +4,7 @@ const fs = require('fs')
 const p = require('path')
 const ipc = require('electron').ipcRenderer
 
-const dir = 'C:\\Users\\people\\Desktop\\Grisha\\School\\zerocoder\\test_projects' // TOEDIT
+const { dir } = require("./devConfig.json")// TOEDIT
 
 const colors_1 = ["#14877F", "#772982", "#4BAF3B", "#ECA345", "#D5784D"]
 const colors_2 = ["#075852", "#31216D", "#226318", "#E47E3C", "#D64E3E"]
