@@ -4,8 +4,26 @@ const fs = require('fs')
 const p = require('path')
 const ipc = require('electron').ipcRenderer
 
-const dir = 'C:\\Users\\Дмитрий\\ZeroCoderProjects' // TOEDIT
+const dir = 'C:\\Users\\people\\Desktop\\Grisha\\School\\zerocoder\\test_projects' // TOEDIT
 
+const colors_1 = ["#14877F", "#772982", "#4BAF3B", "#ECA345", "#D5784D"]
+const colors_2 = ["#075852", "#31216D", "#226318", "#E47E3C", "#D64E3E"]
+const colors_3 = ["#DC7221", "#B7A44B", "#CC963B", "#6C1E07", "#6C1E07"]
+
+uppers = function(pName) {
+    if (pName.includes(' ')) {
+        let parts = pName.split(' ')
+        return parts[0][0].toUpperCase()+parts[1][0].toUpperCase()
+    } else if (pName.includes('-')) {
+        let parts = pName.split('-')
+        return parts[0][0].toUpperCase()+parts[1][0].toUpperCase()
+    } else if (pName.includes('_')) {
+        let parts = pName.split('_')
+        return parts[0][0].toUpperCase()+parts[1][0].toUpperCase()
+    } else if (/[A-Z]/g.test(pName)) {
+        return pName.match(/[A-Z]/g).slice(0,2).join("")
+    }
+}
 window.addEventListener('DOMContentLoaded', () => {
     const replaceText = (selector, text) => {
         const element = document.getElementById(selector)
@@ -34,6 +52,9 @@ window.addEventListener('DOMContentLoaded', () => {
 			t += "hover"
 		}
 		t += '><label for="'+i+'_radio"><p class="p-name">'+projectsList[i].name+'</p><p class="p-path">'+projectsList[i].path+'</p></label>'
+		let r = Math.floor(Math.random()*5)
+		t += '<div class="minicon" style="background: linear-gradient(120deg,'+colors_1[r]+','+colors_2[r]+');"><p style="color:'+colors_3[r]+'">'
+        +uppers(projectsList[i].name)+'</p></div>'
 		element.innerHTML = t
 		element.className = "project"
 		list.appendChild(element)

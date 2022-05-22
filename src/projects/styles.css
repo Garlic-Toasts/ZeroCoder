@@ -12,7 +12,7 @@ html {
 	background: #323335;
 }
 #left_div {
-	position: absolute;
+	position: fixed;
 	left: 0px;
 	top: 0px;
 	width: 200px;
@@ -20,9 +20,9 @@ html {
 	background: #3B3F42;
 }
 #search_projects {
-	position: absolute;
-	left: 25px;
-	top: 20px;
+	position: fixed;
+	left: 225px;
+	top: 50px;
 	width: 270px;
 	height: 30px;
 	background: #323335;
@@ -42,15 +42,15 @@ html {
     background:  url(../../images/cross.png);
 }
 #line {
-	position: absolute;
-	left: 15px;
-	top: 60px;
+	position: fixed;
+	left: 215px;
+	top: 90px;
 	width: 570px;
 	border-bottom: 1px solid #6D6F6E;
 }
 .btn-search {
-	position: absolute;
-	top: 23px;
+	position: fixed;
+	top: 53px;
 	height: 23px;
 	font-size: 10pt;
 	background-color: #4C5053;
@@ -69,15 +69,15 @@ html {
 	color: #4C5053;
 }
 #new_solution {
-	left: 310px;
+	left: 510px;
 	width: 100px;
 }
 #open {
-	left: 420px;
+	left: 620px;
 	width: 50px;
 }
 #get_from_vcs {
-	left: 480px;
+	left: 680px;
 	width: 105px;
 }
 .radio-proj {
@@ -110,10 +110,10 @@ html {
 	color: #ADB4BC;
 }
 #p-div {
-	top: 100px;
+	top: 130px;
 }
 #t-div {
-	top: 130px;
+	top: 160px;
 }
 .footer {
 	background-color: #3B3F42;
@@ -137,27 +137,27 @@ html {
 }
 #logo {
 	position: absolute;
-	top: 30px;
+	top: 60px;
 	left: 20px;
 	width: 40px;
 }
 #name {
 	position: absolute;
-	top: 15px;
+	top: 45px;
 	left: 70px;
 	color: #DCE4EA;
 }
 #version {
 	position: absolute;
-	top: 35px;
+	top: 65px;
 	left: 69px;
 	color: #80878f;
 	font-size: 90%
 }
 #list{
-	position: absolute;
-	top: 70px;
-	left: 20px;	
+	position: fixed;
+	top: 100px;
+	left: 220px;	
 	height: 530px;
 	width: 580px;
 	overflow-y: auto;
@@ -196,6 +196,20 @@ html {
 	top: 20px;
 	left: 40px;
 	color: #ADB4BC;
+}
+.project div.minicon {
+	position: relative;
+	top: 10px;
+	left: 10px;
+	width: 25px;
+	height: 25px;
+	border-radius: 5px;
+}
+.minicon p {
+	position: relative;
+	top: 2.5px;
+	text-align: center;
+	font-size: 10pt;
 }
 li {
 	list-style-type: none;

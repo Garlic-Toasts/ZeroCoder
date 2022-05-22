@@ -8,7 +8,7 @@ setupTitlebar();
 const createWindow = () => {
     const projectsWindow = new BrowserWindow({
         width: 800,
-        height: 630,
+        height: 600,
         icon: './images/icon.ico',
         center: true,
         title: "ZeroCoder | Projects",
