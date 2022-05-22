@@ -1,5 +1,8 @@
 const { Titlebar, Menu } = require("custom-electron-titlebar")
 const { version } = require('./package.json')
+const { v4: uuidv4 } = require('uuid')
+
+const gradient = require('random-gradient')
 const fs = require('fs')
 const p = require('path')
 const ipc = require('electron').ipcRenderer
@@ -9,6 +12,8 @@ const { dir } = require("./devConfig.json")// TOEDIT
 const colors_1 = ["#14877F", "#772982", "#4BAF3B", "#ECA345", "#D5784D"]
 const colors_2 = ["#075852", "#31216D", "#226318", "#E47E3C", "#D64E3E"]
 const colors_3 = ["#CECECE", "#CECECE", "#CECECE", "#000000", "#000000"]
+
+console.log(gradient(uuidv4(), "radial"))
 
 const uppers = function (pName) {
     if (pName.includes(' ')) {
@@ -64,8 +69,8 @@ window.addEventListener('DOMContentLoaded', () => {
             t += "hover"
         }
         t += '><label for="' + i + '_radio"><p class="p-name">' + projectsList[i].name + '</p><p class="p-path">' + projectsList[i].path + '</p></label>'
-        let r = Math.floor(Math.random() * 5)
-        t += '<div class="minicon" style="background: linear-gradient(120deg,' + colors_1[r] + ',' + colors_2[r] + ');"><p style="color:' + colors_3[r] + '">'
+        let randomNumber = Math.floor(Math.random() * 5)
+        t += '<div class="minicon" style="background: linear-gradient(120deg,' + colors_1[randomNumber] + ',' + colors_2[randomNumber] + ');"><p style="color:' + colors_3[randomNumber] + '">'
             + uppers(projectsList[i].name) + '</p></div>'
         element.innerHTML = t
         element.className = "project"

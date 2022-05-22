@@ -28,7 +28,9 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.0-beta1",
-    "custom-electron-titlebar": "^4.1.0"
+    "custom-electron-titlebar": "^4.1.0",
+    "random-gradient": "^0.0.2",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "custom-electron-titlebar": "^4.1.0",
