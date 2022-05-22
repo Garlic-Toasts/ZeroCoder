@@ -41,6 +41,14 @@ window.addEventListener('DOMContentLoaded', () => {
     openButton.addEventListener('click', function (event) {
         ipc.send('select-project-dialog')
     })
+    const helpButton = document.getElementById('help');
+    helpButton.addEventListener('click', function (event) {
+        ipc.send('help-context-menu')
+    })
+    const settingsButton = document.getElementById('settings');
+    settingsButton.addEventListener('click', function (event) {
+        ipc.send('settings-context-menu')
+    })
 
     if (fs.existsSync(dir)) {
         var projectsList = getProjects(dir)

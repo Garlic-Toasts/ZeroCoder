@@ -117,7 +117,7 @@ html {
 .footer:hover{
 	color: #DCE4EA;
 }
-#conf {
+#settings {
 	position: absolute;
 	top: 570px;
 	left: 10px;

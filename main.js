@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, Menu, nativeTheme, shell } = require('electron')
 const { setupTitlebar, attachTitlebarToWindow } = require('custom-electron-titlebar/main')
 
 const ipc = require('electron').ipcMain
@@ -25,6 +25,7 @@ const createWindow = () => {
 
     projectsWindow.loadFile('./src/projects/window.html')
     attachTitlebarToWindow(projectsWindow);
+    nativeTheme.themeSource = 'dark'
 }
 
 app.whenReady().then(() => {
@@ -49,3 +50,50 @@ ipc.on('select-project-dialog', function (event) {
             event.sender.send('selectedItem', file)
     })
 })
+
+ipc.on('help-context-menu', (event) => {
+    const templateMenu = [
+        {
+            label: 'Documentation',
+            click: () => {
+                shell.openExternal("https://github.com/N3wSk1Y/ZeroCoder");
+            }
+        },
+        {
+            label: 'About',
+            click: () => {
+                event.sender.send('event-context-menu-click', 'About');
+            }
+        },
+        {
+            type: 'separator',
+        },
+        {
+            label: 'Report bug',
+            click: () => {
+                shell.openExternal("https://github.com/N3wSk1Y/ZeroCoder/issues");
+            }
+        },
+        {
+            label: 'Request feature',
+            click: () => {
+                shell.openExternal("https://github.com/N3wSk1Y/ZeroCoder/pulls");
+            }
+        }
+    ];
+    const menu = Menu.buildFromTemplate(templateMenu);
+    menu.popup();
+ });
+
+ ipc.on('settings-context-menu', (event) => {
+    const templateMenu = [
+        {
+            label: 'Settings',
+            click: () => {
+                
+            }
+        }
+    ];
+    const menu = Menu.buildFromTemplate(templateMenu);
+    menu.popup();
+ });
