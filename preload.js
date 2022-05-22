@@ -8,7 +8,7 @@ const dir = 'C:\\Users\\people\\Desktop\\Grisha\\School\\zerocoder\\test_project
 
 const colors_1 = ["#14877F", "#772982", "#4BAF3B", "#ECA345", "#D5784D"]
 const colors_2 = ["#075852", "#31216D", "#226318", "#E47E3C", "#D64E3E"]
-const colors_3 = ["#DC7221", "#B7A44B", "#CC963B", "#6C1E07", "#6C1E07"]
+const colors_3 = ["#CECECE", "#CECECE", "#CECECE", "#000000", "#000000"]
 
 uppers = function(pName) {
     if (pName.includes(' ')) {
@@ -22,6 +22,10 @@ uppers = function(pName) {
         return parts[0][0].toUpperCase()+parts[1][0].toUpperCase()
     } else if (/[A-Z]/g.test(pName)) {
         return pName.match(/[A-Z]/g).slice(0,2).join("")
+    } else if (/[0-9]/g.test(pName)) {
+        return pName[0].toUpperCase() + pName.match(/[0-9]/g)[0]
+    } else {
+        return pName[0].toUpperCase()
     }
 }
 window.addEventListener('DOMContentLoaded', () => {
