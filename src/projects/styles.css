@@ -8,7 +8,7 @@ html {
 	top: 0px;
 	left: 200px;
 	width: 600px;
-	height: 600px;
+	height: 700px;
 	background: #323335;
 }
 #left_div {
@@ -171,7 +171,7 @@ html {
 .project label {
 	position: absolute;
 	height: 50px;
-	width: 550px;
+	width: 565px;
 	background-color: #323335;
 	border: none;
 	outline: none;
@@ -185,7 +185,7 @@ html {
 }*/
 .project p.p-name {
 	position: absolute;
-	font-size: 12pt;
+	font-size: 11pt;
 	top: -10px;
 	left: 40px;
 	color: #DCE4EA;
@@ -193,23 +193,23 @@ html {
 .project p.p-path {
 	position: absolute;
 	font-size: 8pt;
-	top: 20px;
+	top: 15px;
 	left: 40px;
 	color: #ADB4BC;
 }
 .project div.minicon {
 	position: relative;
 	top: 10px;
-	left: 10px;
+	left: 8px;
 	width: 25px;
 	height: 25px;
 	border-radius: 5px;
 }
 .minicon p {
 	position: relative;
-	top: 2.5px;
+	top: 4px;
 	text-align: center;
-	font-size: 10pt;
+	font-size: 9pt;
 }
 li {
 	list-style-type: none;
