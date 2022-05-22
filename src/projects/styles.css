@@ -8,7 +8,7 @@ html {
 	top: 0px;
 	left: 200px;
 	width: 600px;
-	height: 700px;
+	height: 600px;
 	background: #323335;
 }
 #left_div {
@@ -91,29 +91,20 @@ html {
 	position: absolute;
 	height: 30px;
 	width: 200px;
-	background-color: #3B3F42;
+	background-color: #4B6EAE;
 	border: none;
 	outline: none;
 	cursor: pointer;
 }
-.radio-proj label:hover {
-	background-color: #464A4D;
-}
-.radio-proj input[type=radio]:checked + label{
-	background-color: #4B6EAE;
-}
 .radio-proj p {
 	position: absolute;
-	font-size: 12pt;
-	top: -12px;
+	font-size: 11pt;
+	top: -10px;
 	left: 40px;
 	color: #ADB4BC;
 }
 #p-div {
 	top: 130px;
-}
-#t-div {
-	top: 160px;
 }
 .footer {
 	background-color: #3B3F42;
@@ -121,6 +112,7 @@ html {
 	border: none;
 	height: 25px;
 	text-align: center;
+	font-size: 9pt;
 }
 .footer:hover{
 	color: #DCE4EA;
@@ -128,12 +120,12 @@ html {
 #conf {
 	position: absolute;
 	top: 570px;
-	left: 20px;
+	left: 10px;
 }
 #help {
 	position: absolute;
 	top: 570px;
-	left: 100px;
+	left: 70px;
 }
 #logo {
 	position: absolute;
@@ -156,9 +148,9 @@ html {
 }
 #list{
 	position: fixed;
-	top: 100px;
+	top: 80px;
 	left: 220px;	
-	height: 530px;
+	height: 510px;
 	width: 580px;
 	overflow-y: auto;
 }
