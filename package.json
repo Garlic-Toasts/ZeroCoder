@@ -2,11 +2,12 @@
   "name": "ZeroCoder",
   "version": "1.0.0",
   "description": "Visual Programming IDE",
-  "main": "main.js",
+  "main": "./execution/main.js",
   "author": "ZeroCoder",
   "license": "Apache 2.0",
   "scripts": {
-    "start": "electron .",
+    "start": "npm run compile && electron .",
+    "compile": "tsc",
     "build": "electron-builder"
   },
   "build": {

@@ -1,5 +1,5 @@
-const { Titlebar, Menu } = require("custom-electron-titlebar")
-const { version } = require('./package.json')
+const { Titlebar } = require("custom-electron-titlebar")
+const { version } = require('../package.json')
 const { v4: uuidv4 } = require('uuid')
 
 const gradient = require('random-gradient')
@@ -7,7 +7,7 @@ const fs = require('fs')
 const p = require('path')
 const ipc = require('electron').ipcRenderer
 
-const { dir } = require("./devConfig.json")// TOEDIT
+const { dir } = require("../devConfig.json")// TOEDIT
 
 const colors_1 = ["#14877F", "#772982", "#4BAF3B", "#ECA345", "#D5784D"]
 const colors_2 = ["#075852", "#31216D", "#226318", "#E47E3C", "#D64E3E"]
@@ -15,7 +15,14 @@ const colors_3 = ["#CECECE", "#CECECE", "#CECECE", "#000000", "#000000"]
 
 console.log(gradient(uuidv4(), "radial"))
 
-const uppers = function (pName) {
+type projectsList = project[] | []
+
+interface project {
+    name: string,
+    path: string
+}
+
+const uppers = function (pName: any) {
     if (pName.includes(' ')) {
         let parts = pName.split(' ')
         return parts[0][0].toUpperCase() + parts[1][0].toUpperCase()
@@ -34,7 +41,7 @@ const uppers = function (pName) {
     }
 }
 window.addEventListener('DOMContentLoaded', () => {
-    const replaceText = (selector, text) => {
+    const replaceText = (selector: string, text: string) => {
         const element = document.getElementById(selector)
         if (element) element.innerText = text
     }
@@ -56,15 +63,15 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     if (fs.existsSync(dir)) {
-        var projectsList = getProjects(dir)
+        var projectsList: projectsList = getProjects(dir)
     } else {
-        var projectsList = []
+        var projectsList: projectsList = []
     }
     var list = document.getElementById('list')
     for (var i = 0; i < projectsList.length; i++) {
         let element = document.createElement('li');
         element.innerText = projectsList[i].name
-        t = '<input type="radio" value="' + projectsList[i].path + 'id="' + i + '_radio"name="radio-list"onClick="openProject()"'
+        let t = '<input type="radio" value="' + projectsList[i].path + 'id="' + i + '_radio"name="radio-list"onClick="openProject()"'
         if (i === 0) {
             t += "hover"
         }
@@ -78,7 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const titlebar = new Titlebar({
-        icon: __dirname + "/images/icon.ico",
+        icon: "../../images/icon.ico",
         backgroundColor: "#3b3e42",
         svgColor: "#FFFFFF",
         iconSize: 23,
@@ -88,7 +95,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 })
 
-function getProjects(dir, projects) {
+function getProjects(dir: string, projects?: project[]): project[] {
     projects = projects || [];
     var allFiles = fs.readdirSync(dir);
     for (var i = 0; i < allFiles.length; i++) {

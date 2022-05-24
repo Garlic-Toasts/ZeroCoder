@@ -1,5 +1,9 @@
-/.vscode
 /node_modules
-/.bprint
 /dist
 /devConfig.json
+/execution
+
+
+
+/.bprint
+/.vscode

@@ -1,15 +1,12 @@
-const { app, BrowserWindow, Menu, nativeTheme, shell } = require('electron')
+const { app, BrowserWindow, Menu, nativeTheme, shell, ipcMain, dialog } = require('electron')
 const { setupTitlebar, attachTitlebarToWindow } = require('custom-electron-titlebar/main')
-
-const ipc = require('electron').ipcMain
-const dialog = require('electron').dialog
 
 setupTitlebar();
 const createWindow = () => {
     const projectsWindow = new BrowserWindow({
         width: 800,
         height: 600,
-        icon: './images/icon.ico',
+        icon: __dirname + '../../images/icon.ico',
         center: true,
         title: "ZeroCoder | Projects",
         resizable: false,
@@ -36,7 +33,7 @@ app.on('window-all-closed', () => {
     app.quit()
 })
 
-ipc.on('select-project-dialog', function (event) {
+ipcMain.on('select-project-dialog', function (event: any) {
     dialog.showOpenDialog({
         title: "Select a project",
         properties: ['openFile'],
@@ -45,13 +42,13 @@ ipc.on('select-project-dialog', function (event) {
         ],
         buttonLabel: "Select",
         defaultPath: '/Users/<username>/Documents/',
-    }, function (file) {
+    }, function (file: File) {
         if (file)
             event.sender.send('selectedItem', file)
     })
 })
 
-ipc.on('help-context-menu', (event) => {
+ipcMain.on('help-context-menu', (event: any) => {
     const templateMenu = [
         {
             label: 'Documentation',
@@ -85,7 +82,7 @@ ipc.on('help-context-menu', (event) => {
     menu.popup();
  });
 
- ipc.on('settings-context-menu', (event) => {
+ ipcMain.on('settings-context-menu', (event: any) => {
     const templateMenu = [
         {
             label: 'Settings',
