@@ -2,16 +2,31 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
-        <title>ZeroCoder | Editor</title>
+        <link rel="stylesheet" href="titlebar.css">
+        <title>ZeroCoder | Projects</title>
     </head>
     <body>
+
         <div id="left_div">
+            <div>
+                <img src="../../images/logo.png" id="logo"/>
+                <p id="name">ZeroCoder</p>
+                <p id="version">version</p>
+            </div>
+            <div class="radio-proj" id="p-div">
+                <input type="radio" value="projects" id="proj_radio" name="radio-menu" onClick="projects()" checked>
+                <label for="proj_radio"><p>Projects</p></label>
+            </div>
+            <input type="button" value="Settings" id="settings" class="footer"/>
+            <input type="button" value="Help" id="help" class="footer"/>
         </div>
-        <div id="edit">
-        </div>
-        <div id="footer_1">
-        </div>
-        <div id="footer_2">
+        <div id="projects">
+            <input type="search" id="search_projects" placeholder="Search projects" onkeyup="search()" oninput="search()"/>
+            <input type="button" class="btn-search" id="new_solution" value="New solution" onClick="newSolution()"/>
+            <input type="button" class="btn-search" id="open" value="Open" onClick="openButton()"/>
+            <input type="button" class="btn-search" id="get_from_vcs" value="Get from VCS" onClick="getFromVcs()" disabled/>
+            <div id="line"></div>
+            <ul id="list"></ul>
         </div>       
         <script type="text/javascript" src="front.js"></script>
     </body>
