@@ -1,5 +1,5 @@
 function search() {
-    let input = document.getElementById("search_projects");
+    let input = document.getElementById("search_projects") as HTMLInputElement;
     let filter = input.value.toUpperCase().trim();
     let ul = document.getElementById("list");
     let li = ul.getElementsByTagName("li");

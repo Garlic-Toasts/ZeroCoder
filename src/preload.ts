@@ -1,19 +1,19 @@
-const { Titlebar } = require("custom-electron-titlebar")
-const { version } = require('../package.json')
-const { v4: uuidv4 } = require('uuid')
+import { Titlebar, Color } from "custom-electron-titlebar"
+import { version } from '../package.json'
+import { v4 as uuidv4 } from 'uuid'
+import { ipcRenderer } from "electron"
+import gradient from 'random-gradient'
+import fs from 'fs'
+import p from 'path'
+import { dir } from "../devConfig.json"// TOEDIT
+require("./projects/front.js")
 
-const gradient = require('random-gradient')
-const fs = require('fs')
-const p = require('path')
-const ipc = require('electron').ipcRenderer
-
-const { dir } = require("../devConfig.json")// TOEDIT
 
 const colors_1 = ["#14877F", "#772982", "#4BAF3B", "#ECA345", "#D5784D"]
 const colors_2 = ["#075852", "#31216D", "#226318", "#E47E3C", "#D64E3E"]
 const colors_3 = ["#CECECE", "#CECECE", "#CECECE", "#000000", "#000000"]
 
-console.log(gradient(uuidv4(), "radial"))
+// console.log(gradient(uuidv4(), "radial"))
 
 type projectsList = project[] | []
 
@@ -51,15 +51,15 @@ window.addEventListener('DOMContentLoaded', () => {
     // Buttons >>
     const openButton = document.getElementById('open');
     openButton.addEventListener('click', function (event) {
-        ipc.send('select-project-dialog')
+        ipcRenderer.send('select-project-dialog')
     })
     const helpButton = document.getElementById('help');
     helpButton.addEventListener('click', function (event) {
-        ipc.send('help-context-menu')
+        ipcRenderer.send('help-context-menu')
     })
     const settingsButton = document.getElementById('settings');
     settingsButton.addEventListener('click', function (event) {
-        ipc.send('settings-context-menu')
+        ipcRenderer.send('settings-context-menu')
     })
 
     if (fs.existsSync(dir)) {
@@ -67,6 +67,7 @@ window.addEventListener('DOMContentLoaded', () => {
     } else {
         var projectsList: projectsList = []
     }
+
     var list = document.getElementById('list')
     for (var i = 0; i < projectsList.length; i++) {
         let element = document.createElement('li');
@@ -86,8 +87,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const titlebar = new Titlebar({
         icon: "../../images/icon.ico",
-        backgroundColor: "#3b3e42",
-        svgColor: "#FFFFFF",
+        backgroundColor: Color.fromHex("#3b3e42"),
+        svgColor: Color.fromHex("#ffffff"),
         iconSize: 23,
         menu: null,
         maximizable: false
