@@ -83,15 +83,15 @@ ipcMain.on('help-context-menu', (event: any) => {
     menu.popup();
  });
 
- ipcMain.on('settings-context-menu', (event: any) => {
-    const templateMenu = [
-        {
-            label: 'Settings',
-            click: () => {
-                
+    ipcMain.on('settings-context-menu', (event: any) => {
+        const templateMenu = [
+            {
+                label: 'Settings',
+                click: () => {
+                    
+                }
             }
-        }
-    ];
-    const menu = Menu.buildFromTemplate(templateMenu);
+        ];
+        const menu = Menu.buildFromTemplate(templateMenu);
     menu.popup();
  });

@@ -20,6 +20,12 @@
         "nsis"
       ]
     },
+    "mac": {
+      "icon": "images/icon.ico",
+      "target": [
+        "dmg"
+      ]
+    },
     "nsis": {
       "oneClick": false,
       "installerIcon": "images/icon.ico",
@@ -27,6 +33,10 @@
       "license": "./LICENSE",
       "uninstallDisplayName": "ZeroCoder",
       "allowToChangeInstallationDirectory": true
+    },
+    "dmg": {
+      "title": "ZeroCoder",
+      "icon": "images/icon.ico"
     }
   },
   "dependencies": {
