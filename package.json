@@ -8,7 +8,9 @@
   "scripts": {
     "start": "npm run compile && electron .",
     "compile": "tsc",
-    "build": "electron-builder"
+    "build": "electron-builder",
+    "buildmac": "electron-builder --mac",
+    "buildlinux": "electron-builder --linux"
   },
   "build": {
     "appId": "ZeroCoder",
