@@ -5,7 +5,7 @@ const backscript: string = "./back.py";
 const fileContent = fs.readFileSync(backscript, "utf8");
 
 class ScriptsHandler {
-    public static runPy(path: string): void {
+    public static execute(path: string): void {
         exec(`python ${path}`, function (error, stdOut, stdErr) {
             console.log(stdOut);
         });
