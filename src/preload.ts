@@ -86,7 +86,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const titlebar = new Titlebar({
-        icon: "../../images/icon.ico",
+        icon: "../../images/appLogo.png",
         backgroundColor: Color.fromHex("#3b3e42"),
         svgColor: Color.fromHex("#ffffff"),
         iconSize: 23,

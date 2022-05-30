@@ -7,7 +7,7 @@ const createWindow = () => {
     const projectsWindow = new BrowserWindow({
         width: 800,
         height: 600,
-        icon: path.resolve(__dirname, '../../images/icon.ico'),
+        icon: path.resolve(__dirname, '../../images/appLogo.png'),
         center: true,
         title: "ZeroCoder | Projects",
         resizable: false,
