@@ -46,6 +46,8 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/random-gradient": "^0.0.0",
+    "@types/uuid": "^8.3.4",
     "custom-electron-titlebar": "^4.1.0",
     "electron": "^18.2.4",
     "electron-builder": "^23.0.3"
