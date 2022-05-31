@@ -5,7 +5,7 @@ import { ipcRenderer } from "electron"
 import gradient from 'random-gradient'
 import fs from 'fs'
 import p from 'path'
-import { dir } from "../devConfig.json"// TOEDIT
+const dir = "C:/Users/Дмитрий/ZeroCoderProjects"// TOEDIT
 require("./projects/front.js")
 
 
