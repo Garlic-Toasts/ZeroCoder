@@ -160,6 +160,14 @@ html {
 .project input[type=radio] {
 	display: none;
 }
+.project .gear {
+	position: absolute;
+	left: 500px;
+	top: 17px;
+	width: 16px;
+	height: 16px;
+	display: none;
+}
 .project label {
 	position: absolute;
 	height: 50px;
@@ -169,12 +177,15 @@ html {
 	outline: none;
 	cursor: pointer;
 }
-.project label:hover {
+.project label:hover{
 	background-color: #464A4D;
 }
-/*.project input[type=radio]:checked + label{
+.project label:hover .gear {
+	display: block;
+}
+.project input[type=radio]:checked + label{
 	background-color: #4B6EAE;
-}*/
+}
 .project p.p-name {
 	position: absolute;
 	font-size: 11pt;
@@ -193,18 +204,19 @@ html {
 	position: relative;
 	top: 10px;
 	left: 8px;
-	width: 25px;
-	height: 25px;
+	width: 22px;
+	height: 22px;
 	border-radius: 5px;
 }
 .minicon p {
 	position: relative;
-	top: 4px;
+	top: 3px;
 	text-align: center;
 	font-size: 9pt;
 }
 li {
 	list-style-type: none;
+	margin-bottom: -13px;
 }
 ul {
 	padding-left: 0;

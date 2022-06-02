@@ -13,3 +13,7 @@ function search() {
     }
 }
 
+function projectSettings(){
+    console.log("!");
+}
+

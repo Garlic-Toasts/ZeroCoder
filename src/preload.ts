@@ -1,8 +1,8 @@
 import { Titlebar, Color } from "custom-electron-titlebar"
 import { version } from '../package.json'
-import { v4 as uuidv4 } from 'uuid'
+//import { v4 as uuidv4 } from 'uuid'
 import { ipcRenderer } from "electron"
-import gradient from 'random-gradient'
+//import gradient from 'random-gradient'
 import fs from 'fs'
 import p from 'path'
 import { dir } from "../devConfig.json"// TOEDIT
@@ -72,11 +72,9 @@ window.addEventListener('DOMContentLoaded', () => {
     for (var i = 0; i < projectsList.length; i++) {
         let element = document.createElement('li');
         element.innerText = projectsList[i].name
-        let t = '<input type="radio" value="' + projectsList[i].path + 'id="' + i + '_radio"name="radio-list"onClick="openProject()"'
-        if (i === 0) {
-            t += "hover"
-        }
-        t += '><label for="' + i + '_radio"><p class="p-name">' + projectsList[i].name + '</p><p class="p-path">' + projectsList[i].path + '</p></label>'
+        let t = '<input type="radio" value="' + projectsList[i].path + 'id="' + i + '_radio"name="radio-list"onClick="openProject()">'
+        t += '<label for="' + i + '_radio"><p class="p-name">' + projectsList[i].name + '</p><p class="p-path">' + projectsList[i].path + '</p>'
+        t += '<input type="image" class="gear" src="../../images/gear.svg" onclick="projectSettings();"/></label>'
         let randomNumber = Math.floor(Math.random() * 5)
         t += '<div class="minicon" style="background: linear-gradient(120deg,' + colors_1[randomNumber] + ',' + colors_2[randomNumber] + ');"><p style="color:' + colors_3[randomNumber] + '">'
             + uppers(projectsList[i].name) + '</p></div>'
