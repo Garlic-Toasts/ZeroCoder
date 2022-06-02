@@ -5,7 +5,7 @@ import { ipcRenderer } from "electron"
 //import gradient from 'random-gradient'
 import fs from 'fs'
 import p from 'path'
-import { dir } from "../devConfig.json"// TOEDIT
+const dir = "C:/Users/Дмитрий/ZeroCoderProjects"// TOEDIT
 require("./projects/front.js")
 
 
@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const titlebar = new Titlebar({
-        icon: "../../images/icon.ico",
+        icon: "../../images/appLogo.png",
         backgroundColor: Color.fromHex("#3b3e42"),
         svgColor: Color.fromHex("#ffffff"),
         iconSize: 23,
